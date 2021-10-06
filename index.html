@@ -36,7 +36,7 @@
         <i class="fas fa-bars"></i>
         <span class="sr-only">Open menu</span>
       </button>
-      <div id="mobile-menu" class="mobile-menu active">
+      <div id="mobile-menu" class="mobile-menu">
           <form class="search" action="/search" method="GET">
             <input type="search" />
             <button class="btn-search" type="submit"><i class="fas fa-search fa-2l"></i></button>
@@ -77,7 +77,32 @@
       </section>
       <section>
         <h2 class="section__heading">Best sellers</h2>
-        <!-- 4 cards -->
+        <ul class="product__list">
+          <li class="product__card">
+            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers.jpg" alt=""></a>
+              <a href="/games/1"> <h3 class="product__title">Ping Pong Championship</h3></a>
+              <p class="product__price">349 kr</p>
+              <button class="add-to-cart">Add to basket</button>
+        </li>
+          <li class="product__card">
+            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers2.jpg" alt=""></a>
+              <a href="/games/1"><h3 class="product__title">Super Duper</h3></a>
+              <p class="product__price">199 kr</p>
+              <button class="add-to-cart">Add to basket</button>
+        </li>
+          <li class="product__card">
+            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers3.jpg" alt=""></a>
+              <a href="/games/1"><h3 class="product__title">Black</h3></a>
+              <p class="product__price">399 kr</p>
+              <button class="add-to-cart">Add to basket</button>
+        </li>
+          <li class="product__card">
+            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers4.jpg" alt=""></a>
+              <a href="/games/1"> <h3 class="product__title">Furious</h3> </a>
+              <p class="product__price">429 kr</p>
+              <button class="add-to-cart">Add to basket</button>
+        </li>
+        </ul>
         <a class="section__link" href="/prodlist">Browse more games</a>
       </section>
     </main>

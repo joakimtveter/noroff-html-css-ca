@@ -24,8 +24,8 @@ function countdownTimer() {
 
     daysElement.innerHTML = (days >= 10) ? days : `0${days}`;
     hoursElement.innerHTML = (hours >= 10) ? hours : `0${hours}`;
-    minutesElement.innerHTML = (minutes >= 10) ? minutes : `0${minutes}`;;
-    secondsElement.innerHTML = (seconds >= 10) ? seconds : `0${seconds}`;;
+    minutesElement.innerHTML = (minutes >= 10) ? minutes : `0${minutes}`;
+    secondsElement.innerHTML = (seconds >= 10) ? seconds : `0${seconds}`;
 }
 
 setInterval(countdownTimer, 1000);
