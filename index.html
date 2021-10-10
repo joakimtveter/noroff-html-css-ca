@@ -20,47 +20,67 @@
     <script src="/scripts/script.js" defer></script>
   </head>
   <body id="front-page">
-    <header class="site-header cwc">
-      <div class="branding">
-        <img
-          class="logo"
-          src="/assets/logo.png"
-          alt="Gamehub - The universe of games"
-        />
-        <h1 class="sr-only">Gamehub</h1>
-        <a class="sr-only sr-only-focusable" href="#main-content"
-          >Skip to main content</a
-        >
-      </div>
-      <button class="hamburger" onclick="openMenu()">
-        <i class="fas fa-bars"></i>
-        <span class="sr-only">Open menu</span>
-      </button>
-      <div id="mobile-menu" class="mobile-menu">
-          <form class="search" action="/search" method="GET">
-            <input type="search" />
-            <button class="btn-search" type="submit"><i class="fas fa-search fa-2l"></i></button>
+    <header class="site-header">
+      <div class="cwc">
+        <div class="branding">
+          <img
+            class="logo"
+            src="/assets/logo.png"
+            alt="Gamehub - The universe of games"
+          />
+          <h1 class="sr-only">Gamehub</h1>
+          <a class="sr-only sr-only-focusable" href="#main-content"
+            >Skip to main content</a
+          >
+        </div>
+        <button aria-label="Open Menu" class="hamburger" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <div id="mobile-menu" class="mobile-menu">
+          <form role="search" class="search" action="/search" method="GET">
+            <input type="search" role="searchbox" />
+            <button aria-label="Submit Search" class="btn-search" type="submit">
+              <i class="fas fa-search fa-2l"></i>
+            </button>
           </form>
-              <ul class="utility-menu">
-                <li><a href="/wishlist"><i class="fas fa-list fa-lg"></i></a></li>
-                <li><button><i class="fas fa-user fa-lg"></i></button></li>
-                <li><a href="/basket"><i class="fas fa-shopping-basket fa-lg"></i></a></li>
-              </ul>
-            <nav class="main-nav">
-                <ul>
-                    <li class="main-nav__item">
-                        <a href="/games" class="main-nav__link">Purchase Games</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="/sell-games" class="main-nav__link">Sell your Games</a>
-                    </li>
-                </ul>
-            </nav>
-        <button class="hamburger-close" onclick="closeMenu()">
-          <i class="far fa-times-circle"></i
-          ><span class="sr-only">Close Menu</span>
-    </div>
-    </button>
+          <ul class="utility-menu">
+            <li>
+              <a aria-label="Go to my wishlist" href="/wishlist"
+                ><i class="fas fa-list fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <button aria-label="Login">
+                <i class="fas fa-user fa-lg"></i>
+              </button>
+            </li>
+            <li>
+              <a aria-label="Go to shoppingbasket" href="/basket"
+                ><i class="fas fa-shopping-basket fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+          <nav class="main-nav">
+            <ul>
+              <li class="main-nav__item">
+                <a href="/games" class="main-nav__link">Purchase Games</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="/sell-games" class="main-nav__link">Sell your Games</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            aria-label="Close Menu"
+            class="hamburger-close"
+            onclick="closeMenu()"
+          >
+            <i class="far fa-times-circle"></i
+            ><span class="sr-only">Close Menu</span>
+          </button>
+        </div>
+      </div>
     </header>
     <main id="main-content">
       <section class="jumbotron">
@@ -75,86 +95,112 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="cwc">
         <h2 class="section__heading">Best sellers</h2>
-        <ul class="product__list">
+        <ul aria-label="Best selling games" class="product__list">
           <li class="product__card">
-            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers.jpg" alt=""></a>
-              <a href="/games/1"> <h3 class="product__title">Ping Pong Championship</h3></a>
-              <p class="product__price">349 kr</p>
-              <button class="add-to-cart">Add to basket</button>
-        </li>
+            <a aria-hidden="true" href="/games/1"
+              ><img
+                class="product__image"
+                src="/assets/product-images/GameHub_covers.jpg"
+                alt=""
+            /></a>
+            <a href="/games/1">
+              <h3 class="product__title">Ping Pong Championship</h3></a
+            >
+            <p class="product__price">349 kr</p>
+            <button class="add-to-cart">Add to basket</button>
+          </li>
           <li class="product__card">
-            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers2.jpg" alt=""></a>
-              <a href="/games/1"><h3 class="product__title">Super Duper</h3></a>
-              <p class="product__price">199 kr</p>
-              <button class="add-to-cart">Add to basket</button>
-        </li>
+            <a aria-hidden="true" href="/games/1"
+              ><img
+                class="product__image"
+                src="/assets/product-images/GameHub_covers2.jpg"
+                alt=""
+            /></a>
+            <a href="/games/1"><h3 class="product__title">Super Duper</h3></a>
+            <p class="product__price">199 kr</p>
+            <button class="add-to-cart">Add to basket</button>
+          </li>
           <li class="product__card">
-            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers3.jpg" alt=""></a>
-              <a href="/games/1"><h3 class="product__title">Black</h3></a>
-              <p class="product__price">399 kr</p>
-              <button class="add-to-cart">Add to basket</button>
-        </li>
+            <a aria-hidden="true" href="/games/1"
+              ><img
+                class="product__image"
+                src="/assets/product-images/GameHub_covers3.jpg"
+                alt=""
+            /></a>
+            <a href="/games/1"><h3 class="product__title">Black</h3></a>
+            <p class="product__price">399 kr</p>
+            <button class="add-to-cart">Add to basket</button>
+          </li>
           <li class="product__card">
-            <a href="/games/1"><img class="product__image" src="/assets/product-images/GameHub_covers4.jpg" alt=""></a>
-              <a href="/games/1"> <h3 class="product__title">Furious</h3> </a>
-              <p class="product__price">429 kr</p>
-              <button class="add-to-cart">Add to basket</button>
-        </li>
+            <a aria-hidden="true" href="/games/1"
+              ><img
+                class="product__image"
+                src="/assets/product-images/GameHub_covers4.jpg"
+                alt=""
+            /></a>
+            <a href="/games/1"> <h3 class="product__title">Furious</h3> </a>
+            <p class="product__price">429 kr</p>
+            <button class="add-to-cart">Add to basket</button>
+          </li>
         </ul>
         <a class="section__link" href="/prodlist">Browse more games</a>
       </section>
     </main>
     <footer class="site-footer">
-      <div class="footer-branding">
-        <div class="footer-logo">
-          <img src="/assets/footer-logo.png" alt="" />
+      <div class="cwc">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <img src="/assets/footer-logo.png" alt="" />
+          </div>
+          <div class="some-links">
+            <ul>
+              <li class="some-link facebook fa-lg">
+                <a href="http://facebook.com"
+                  ><i class="fab fa-facebook-f"></i
+                  ><span class="sr-only">Facebook</span></a
+                >
+              </li>
+              <li class="some-link instagram fa-lg">
+                <a href="http://instagram.com"
+                  ><i class="fab fa-instagram"></i
+                  ><span class="sr-only">Instagram</span></a
+                >
+              </li>
+              <li class="some-link discord fa-lg">
+                <a href="http://discord.com"
+                  ><i class="fab fa-discord"></i
+                  ><span class="sr-only">Discord</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- end some-links -->
         </div>
-        <div class="some-links">
+        <!-- end footer-branding -->
+        <nav class="footer-nav">
           <ul>
-            <li class="some-link facebook fa-lg">
-              <a href="http://facebook.com"
-                ><i class="fab fa-facebook-f"></i
-                ><span class="sr-only">Facebook</span></a
+            <li class="footer-nav__item">
+              <a href="/my-account" class="footer-nav__link">My Account</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="/my-wishlist" class="footer-nav__link">My Wishlist</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="/terms-and-conditions" class="footer-nav__link"
+                >Terms and conditions</a
               >
             </li>
-            <li class="some-link instagram fa-lg">
-              <a href="http://instagram.com"
-                ><i class="fab fa-instagram"></i
-                ><span class="sr-only">Instagram</span></a
-              >
+            <li class="footer-nav__item">
+              <a href="/faq" class="footer-nav__link">FAQ</a>
             </li>
-            <li class="some-link discord fa-lg">
-              <a href="http://discord.com"
-                ><i class="fab fa-discord"></i
-                ><span class="sr-only">Discord</span></a
-              >
+            <li class="footer-nav__item">
+              <a href="/contact-us" class="footer-nav__link">Contact us</a>
             </li>
           </ul>
-        </div><!-- end some-links -->
-      </div><!-- end footer-branding -->
-      <nav class="footer-nav">
-        <ul>
-          <li class="footer-nav__item">
-            <a href="/my-account" class="footer-nav__link">My Account</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="/my-wishlist" class="footer-nav__link">My Wishlist</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="/terms-and-conditions" class="footer-nav__link"
-              >Terms and conditions</a
-            >
-          </li>
-          <li class="footer-nav__item">
-            <a href="/faq" class="footer-nav__link">FAQ</a>
-          </li>
-          <li class="footer-nav__item">
-            <a href="/contact-us" class="footer-nav__link">Contact us</a>
-          </li>
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>

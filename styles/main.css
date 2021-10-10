@@ -24,7 +24,7 @@
   --max-content-width: 75rem;
   --header-height: 11.6875rem;
   --footer-height: 3.5rem;
-  --logo-height: 5rem;
+  --logo-height: 10rem;
 }
 @media (max-width: 40rem) {
   :root {
@@ -64,12 +64,15 @@ button {
 /* HEADER */
 .site-header {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: var(--header-hight);
   background-color: var(--color-secondary);
   padding-inline: 1rem;
+  padding-block: 1rem;
+}
+.site-header.cwc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .branding img {
@@ -94,8 +97,9 @@ button {
 }
 
 @media (min-width: 40.05rem) {
-  .site-header {
+  .site-header.cwc {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -213,17 +217,26 @@ button {
 }
 
 @media (min-width: 40.05rem) {
+  .search {
+    /* grid-area: search; */
+  }
   .main-nav ul {
     flex-direction: row;
+    /* grid-area: nav; */
+    font-size: 1.25rem;
+  }
+  .utility-menu {
+    margin-inline-end: 2rem;
   }
   .utility-menu > * {
     background-color: var(--color-primary);
+    /* grid-area: util; */
   }
   .mobile-menu {
     position: static;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 75vw;
+    justify-content: flex-end;
   }
   .mobile-menu.active {
     position: static;
@@ -233,14 +246,20 @@ button {
 /* MAIN */
 .cwc {
   max-width: var(--max-content-width);
+  margin-inline: auto;
 }
 
 /* FOOTER */
 .site-footer {
   background-color: var(--color-background);
   margin-block-start: 1rem;
-  padding-block-start: 1rem;
+  padding-block: 1rem;
   padding-inline: 1rem;
+}
+
+.site-footer .cwc {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-nav ul {
@@ -248,9 +267,10 @@ button {
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0.5rem;
+  gap: 0.5rem;
 }
 .footer-nav li {
-  padding: 0.5rem;
+  padding-block: 0.5rem;
 }
 
 .footer-branding {
@@ -273,6 +293,22 @@ button {
 .some-link a {
   display: inline-block;
   color: var(--color-white);
+}
+
+@media (min-width: 40.05rem) {
+  .footer-branding {
+    justify-content: flex-start;
+  }
+  .footer-nav ul {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 55rem) {
+  .site-footer .cwc {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /* COMPONENTS */
@@ -318,8 +354,9 @@ button {
 .product__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-block: 1rem;
+  padding-inline: 1rem;
   gap: 1rem;
 }
 
@@ -345,6 +382,12 @@ button {
   padding-inline: 0.75em;
   border-radius: 5px;
   margin-block: 0.5rem;
+}
+
+@media (min-width: 40.05rem) {
+  .product__card {
+    width: 20%;
+  }
 }
 
 /* ACCESSABILLITY */
