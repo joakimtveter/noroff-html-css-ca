@@ -100,26 +100,9 @@ button {
   width: 2rem;
 }
 
-@media (min-width: 40.05rem) {
-  .site-header__container {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 10rem auto;
-    overflow: auto;
-  }
-  .mobile-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .utility-menu {
-    justify-self: end;
-  }
+@media (min-width: 55rem) {
   .search {
-    justify-self: end;
-  }
-  .main-nav {
-    grid-column: 1 / -1;
-    justify-self: end;
+    justify-self: center;
   }
 }
 
@@ -259,7 +242,28 @@ button {
     position: static;
   }
 }
-
+@media (min-width: 40.05rem) {
+  .site-header__container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 10rem auto;
+    overflow: auto;
+  }
+  .mobile-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .utility-menu {
+    justify-self: end;
+  }
+  .search {
+    justify-self: end;
+  }
+  .main-nav {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
 /* MAIN */
 .cwc {
   max-width: var(--max-content-width);
@@ -347,7 +351,7 @@ button {
 }
 
 #front-page .jumbotron {
-  background-image: url(/assets/images/keys.jpg);
+  background-image: url("../assets/images/keys.jpg");
   height: 80vh;
   background-color: var(--color-primary);
   background-blend-mode: overlay;
