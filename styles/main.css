@@ -1,3 +1,4 @@
+/*   RESETS   */
 *,
 *::before,
 *::after {
@@ -5,7 +6,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+}
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Custom Properties */
 :root {
   --color-primary: hsl(226, 38%, 18%);
   --color-secondary: hsl(209, 24%, 40%);
@@ -22,18 +36,12 @@
 
   --max-page-width: 175rem;
   --max-content-width: 75rem;
-  --header-height: 11.6875rem;
-  --footer-height: 3.5rem;
-  --logo-height: 10rem;
+  --header-height: 10rem;
+  --footer-height: 25rem;
+  --logo-height: 5rem;
 }
-@media (max-width: 40rem) {
-  :root {
-    --header-height: 10rem;
-    --footer-height: 25rem;
-    --logo-height: 5rem;
-  }
-}
-@media (min-width: 40.05rem) {
+
+@media (min-width: 45.05rem) {
   :root {
     --logo-height: 7.5rem;
   }
@@ -50,19 +58,6 @@ body {
 
 a {
   color: var(--color-accent);
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-button {
-  cursor: pointer;
 }
 
 /* HEADER */
@@ -100,21 +95,15 @@ button {
   width: 2rem;
 }
 
-@media (min-width: 55rem) {
-  .search {
-    justify-self: center;
-  }
-}
-
 /* MENUS */
 
-@media (min-width: 40.05rem) {
+@media (min-width: 45.05rem) {
   .hamburger,
   .hamburger-close {
     display: none;
   }
 }
-@media (max-width: 40rem) {
+@media (max-width: 45rem) {
   .mobile-menu {
     position: absolute;
     height: 1px;
@@ -221,7 +210,7 @@ button {
   color: var(--color-accent);
 }
 
-@media (min-width: 40.05rem) {
+@media (min-width: 45.05rem) {
   .main-nav ul {
     flex-direction: row;
     font-size: 1.25rem;
@@ -242,7 +231,7 @@ button {
     position: static;
   }
 }
-@media (min-width: 40.05rem) {
+@media (min-width: 45.05rem) {
   .site-header__container {
     display: grid;
     justify-content: space-between;
@@ -264,6 +253,19 @@ button {
     justify-self: end;
   }
 }
+
+@media (min-width: 55rem) {
+  .search {
+    /* justify-self: center; */
+    align-self: end;
+    width: 20rem;
+  }
+  .site-header__container {
+    grid-template-columns: 15rem 1fr;
+    overflow: auto;
+  }
+}
+
 /* MAIN */
 .cwc {
   max-width: var(--max-content-width);
@@ -316,7 +318,7 @@ button {
   color: var(--color-white);
 }
 
-@media (min-width: 40.05rem) {
+@media (min-width: 45.05rem) {
   .footer-branding {
     justify-content: flex-start;
   }
@@ -405,7 +407,7 @@ button {
   margin-block: 0.5rem;
 }
 
-@media (min-width: 40.05rem) {
+@media (min-width: 45.05rem) {
   .product__card {
     width: 20%;
   }
@@ -441,3 +443,8 @@ button {
 }
 
 /* 1 https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034 */
+
+*:focus {
+  outline: var(--color-accent) solid 0.25rem;
+  outline-offset: 0.1rem;
+}

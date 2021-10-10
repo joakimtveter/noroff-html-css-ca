@@ -13,7 +13,7 @@ function countdownTimer() {
     const hoursElement = document.querySelector('.timer.hrs');
     const minutesElement = document.querySelector('.timer.min');
     const secondsElement = document.querySelector('.timer.sec');
-    const target = new Date('2021-10-31T07:00:00').getTime();
+    const target = new Date('2021-10-24T07:00:00').getTime();
     const now = new Date().getTime();
     const remaining = target - now;
   
