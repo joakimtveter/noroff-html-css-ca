@@ -124,6 +124,10 @@ button {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 .hamburger {
@@ -145,6 +149,7 @@ button {
   border: none;
   background: transparent;
   font-size: 2rem;
+  z-index: 10;
 }
 .hamburger:hover,
 .hamburger:focus,
