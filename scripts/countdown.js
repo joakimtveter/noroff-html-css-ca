@@ -1,19 +1,9 @@
-function openMenu() {
-    const mobileMenu = document.querySelector('#mobile-menu');
-    mobileMenu.classList.add('active');
-}
-
-function closeMenu() {
-    const mobileMenu = document.querySelector('#mobile-menu');
-    mobileMenu.classList.remove('active');
-}
-
 function countdownTimer() {
     const daysElement = document.querySelector('.timer.days');
     const hoursElement = document.querySelector('.timer.hrs');
     const minutesElement = document.querySelector('.timer.min');
     const secondsElement = document.querySelector('.timer.sec');
-    const target = new Date('2021-10-24T07:00:00').getTime();
+    const target = new Date('2021-11-22T07:00:00').getTime();
     const now = new Date().getTime();
     const remaining = target - now;
   

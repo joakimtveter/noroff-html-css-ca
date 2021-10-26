@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gamehub - The universe of games</title>
+    <title>My Wishlist | Gamehub - The universe of games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,19 +17,19 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./scripts/main.js" defer></script>
-    <script src="./scripts/countdown.js" defer></script>
-    <script src="./backend/db.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
   </head>
-  <body id="front-page">
+  <body id="wishlist">
     <header class="site-header">
       <div class="site-header__container cwc">
         <div class="branding">
-          <img
-            class="logo"
-            src="./assets/logo.png"
-            alt="Gamehub - The universe of games"
-          />
+          <a href="/">
+            <img
+              class="logo"
+              src="./assets/logo.png"
+              alt="Go to Gamehub frontpage"
+            />
+          </a>
           <h1 class="sr-only">Gamehub</h1>
           <a class="sr-only sr-only-focusable" href="#main-content"
             >Skip to main content</a
@@ -87,82 +87,7 @@
       </div>
     </header>
     <main id="main-content">
-      <section class="jumbotron">
-        <div class="jumbotron__content">
-          <h2 class="jumotron__heading">Holiday Super Sale</h2>
-          <p class="jumotron__subheading">Starts in:</p>
-          <p class="countdown">
-            <span class="timer days">00</span>d
-            <span class="timer hrs">00</span>h
-            <span class="timer min">00</span>m
-            <span class="timer sec">00</span>s
-          </p>
-        </div>
-      </section>
-      <section class="cwc">
-        <h2 class="section__heading">Best sellers</h2>
-        <ul aria-label="Best selling games" class="product__list">
-          <li class="product__card">
-            <a aria-hidden="true" href="/game.html?1"
-              ><img
-                class="product__image"
-                src="./assets/product-images/GameHub_covers.jpg"
-                alt=""
-            /></a>
-            <a href="/game.html?1">
-              <h3 class="product__title">Ping Pong Championship</h3></a
-            >
-            <p class="product__price">349 kr</p>
-            <button class="add-to-cart" onclick="e => addToBasket(e)">
-              Add to basket
-            </button>
-          </li>
-          <li class="product__card">
-            <a aria-hidden="true" href="/game.html?2"
-              ><img
-                class="product__image"
-                src="./assets/product-images/GameHub_covers2.jpg"
-                alt=""
-            /></a>
-            <a href="/game.html?2"
-              ><h3 class="product__title">Super Duper</h3></a
-            >
-            <p class="product__price">199 kr</p>
-            <button class="add-to-cart" onclick="() => console.log(e)">
-              Add to basket
-            </button>
-          </li>
-          <li class="product__card">
-            <a aria-hidden="true" href="/game.html?3"
-              ><img
-                class="product__image"
-                src="./assets/product-images/GameHub_covers3.jpg"
-                alt=""
-            /></a>
-            <a href="/game.html?3"><h3 class="product__title">Black</h3></a>
-            <p class="product__price">399 kr</p>
-            <button class="add-to-cart" onclick="e => addToBasket(e)">
-              Add to basket
-            </button>
-          </li>
-          <li class="product__card">
-            <a aria-hidden="true" href="/game.html?4"
-              ><img
-                class="product__image"
-                src="./assets/product-images/GameHub_covers4.jpg"
-                alt=""
-            /></a>
-            <a href="/game.html?4">
-              <h3 class="product__title">Furious</h3>
-            </a>
-            <p class="product__price">429 kr</p>
-            <button class="add-to-cart" onclick="e => addToBasket(e)">
-              Add to basket
-            </button>
-          </li>
-        </ul>
-        <a class="section__link" href="/games.html">Browse more games</a>
-      </section>
+      <h1>My wishlist</h1>
     </main>
     <footer class="site-footer">
       <div class="cwc">
