@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gamehub - The universe of games</title>
+    <title>Page not found | Gamehub - The universe of games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +17,10 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./scripts/main.js" defer></script>
-    <script src="./backend/db.js"></script>
+    <link rel="stylesheet" href="./styles/404.css" />
+    <script src="./scripts/script.js" defer></script>
   </head>
-  <body id="single-game">
+  <body id="page-not-found">
     <header class="site-header">
       <div class="site-header__container cwc">
         <div class="branding">
@@ -87,72 +87,13 @@
         </div>
       </div>
     </header>
-    <script>
-      const gameID = parseInt(window.location.search.substring(1));
-      console.log(gameID);
-      const gameIndex = PRODUCTS.findIndex((x) => x.id === gameID);
-      console.log(gameIndex);
-      const game = PRODUCTS[gameIndex];
-
-      document.title = `${game.title} | Gamehub - The universe of games`;
-    </script>
-    <main id="main-content cwc">
-      <script>
-        document.write(`
-         <div class="product-image">
-           <img src="${game.image}" alt="${game.title} cover">
-         </div>
-          <div class="product-body">
-            <h1>${game.title}</h1>
-            <p>${game.desciption}</p>
-          </div>                           
-          <p class="price">${game.price} kr</p>
-          <button class="btm primary">Add to cart</button>
-          <p class="stock">${game.stock} in stock</p>
-          <div class="game-info">
-            <table>
-              <tr>
-                <th>Platform:</th>
-                <td>
-                  `);
-        game.platform.map((platform) =>
-          document.write(`<li>${platform} </li>`)
-        );
-        document.write(`
-                  </td>
-              </tr>
-              <tr>
-                <th>Multiplayer:</th>
-                <td>${game.multiplayer}</td>
-              </tr>
-              <tr>
-                <th>Aget Rating:</th>
-                <td>${game.ageRating}</td>
-              </tr>
-              <tr>
-                <th>Genre:</th>
-                <td>
-                  `);
-        game.grene.map((gr) => document.write(`<li>${gr} </li>`));
-        document.write(`
-                  </td>
-              </tr>
-              <tr>
-                <th>Tags:</th>
-                <td>
-        `);
-        game.tags.map((tag) => document.write(`<li>${tag}</li>`));
-        document.write(`
-                  </td>
-              </tr>
-              <tr>
-                <th>Relase date:</th>
-                <td>${game.relaseDate}</td>
-              </tr>
-            </table>
-          </div>
-          `);
-      </script>
+    <main id="main-content">
+      <h1>Game Over</h1>
+      <p>
+        We don't know if it was you or us, but the page you were looking for
+        does not exist. Please try another page.
+      </p>
+      <p>( 404 Not Found )</p>
     </main>
     <footer class="site-footer">
       <div class="cwc">

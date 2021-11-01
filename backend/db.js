@@ -10,8 +10,9 @@ const PRODUCTS = [
     grene: ['Action', 'Adventure'],
     tags: ['Action', 'Adventure', 'Single Player'],
     relaseDate: '2020-12-15',
-    desciption: '',
-    image: './assets/product-images/GameHub_covers.jpg'
+    desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+    image: './assets/product-images/GameHub_covers.jpg',
+    stock: 15,
    },
    {
       id: 2,
@@ -24,8 +25,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers2.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers2.jpg',
+      stock: 2,
    },
    {
       id: 3,
@@ -38,8 +40,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers3.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers3.jpg',
+      stock: 25,
    },
    {
       id: 4,
@@ -52,8 +55,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers4.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers4.jpg',
+      stock: 2,
    },   
    {
       id: 5,
@@ -66,8 +70,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers5.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers5.jpg',
+      stock: 2,
    },
    {
       id: 6,
@@ -81,7 +86,8 @@ const PRODUCTS = [
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
       desciption: '',
-      image: './assets/product-images/GameHub_covers6.jpg'
+      image: './assets/product-images/GameHub_covers6.jpg',
+      stock: 2,
    },
    {
       id: 7,
@@ -94,8 +100,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers7.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers7.jpg',
+      stock: 2,
    },
    {
       id: 8,
@@ -108,8 +115,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers8.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers8.jpg',
+      stock: 2,
    },
    {
       id: 9,
@@ -122,8 +130,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers9.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers9.jpg',
+      stock: 2,
    },
    {
       id: 10,
@@ -136,8 +145,9 @@ const PRODUCTS = [
       grene: ['Action', 'Adventure'],
       tags: ['Action', 'Adventure', 'Single Player'],
       relaseDate: '2020-12-15',
-      desciption: '',
-      image: './assets/product-images/GameHub_covers10.jpg'
+      desciption: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, sint ea? Similique, saepe inventore neque reiciendis possimus eveniet quos quidem recusandae atque perspiciatis, eum nemo!',
+      image: './assets/product-images/GameHub_covers10.jpg',
+      stock: 2,
    }
 ]
 
@@ -146,18 +156,21 @@ const USERS = [
       id: 1,
       email: 'joakim2@example.com',
       name: 'Joakim Tveter',
-      password: '12345'
+      password: '12345',
+      avatar: '',
    },
    {
       id: 2,
       email: 'ole@example.com',
       name: 'Ole Olsen',
-      password: '12345'
+      password: '12345',
+      avatar: '',
    },
    {
       id: 3,
       email: 'kari@example.com',
       name: 'Kari Hansen',
-      password: '12345'
+      password: '12345',
+      avatar: '',
    }
 ]
