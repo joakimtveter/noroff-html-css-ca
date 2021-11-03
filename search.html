@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/search.css" />
     <script src="./scripts/main.js" defer></script>
+    <script src="./backend/db.js"></script>
   </head>
   <body id="search">
     <header class="site-header">
@@ -47,7 +48,7 @@
               action="/search.html"
               method="GET"
             >
-              <input type="search" name="q" role="searchbox" />
+              <input id="searchbox" type="search" name="q" role="searchbox" />
               <button
                 aria-label="Submit Search"
                 class="btn-search"
@@ -133,6 +134,42 @@
     </header>
     <main id="main-content" class="main-content cwc">
       <h1>Search Results</h1>
+      <script>
+        const term = window.location.search.substring(3).replace(/\+/g, " ");
+        document.title = `Search results for ${term} | Gamehub - The universe of games`;
+        document.querySelector("#searchbox").setAttribute("value", term);
+
+        let searchResults = PRODUCTS.filter(function (game) {
+          return game.title.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+        });
+        document.write(
+          `<p>Your search for ${term} gave ${searchResults.length} results</p>`
+        );
+
+        if (searchResults.length > 0) {
+          searchResults.map((result) => {
+            document.write(`
+              <div class="product__card">
+              <a aria-hidden="true" href="/game.html?${result.id}">
+                <img class="product__image" src=${result.image}
+                  alt=""
+                /></a>
+            <a href="/game.html?${result.id}">
+              <h3 class="product__title">${result.title}</h3></a
+            >
+            <p class="product__price">${result.price} kr</p>
+            <button class="add-to-cart" onclick="(e) => addToBasket(e)">
+              Add to basket
+            </button>
+            <button class="add-to-wishlist" onclick="(e) => addToWishlist(e)">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+            `);
+          });
+        }
+      </script>
+      <div id="search-result"></div>
     </main>
     <footer class="site-footer">
       <div class="cwc">
@@ -188,11 +225,5 @@
         </nav>
       </div>
     </footer>
-    <script>
-      const term = window.location.search.substring(3).replace(/\+/g, " ");
-      document.title = `Search results for ${term} | Gamehub - The universe of games`;
-      const searchbox = document.querySelector("#searchbox");
-      searchbox.setAttribute("value", term);
-    </script>
   </body>
 </html>
