@@ -12,6 +12,7 @@ body {
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 img {
@@ -21,20 +22,6 @@ img {
 
 button {
   cursor: pointer;
-}
-
-.btn {
-  display: inline-block;
-  width: max-content;
-  margin-inline: auto;
-  text-transform: uppercase;
-  padding: 0.25em 2em;
-  border: none;
-  border-radius: 5px;
-}
-
-.btn.primary {
-  background-color: var(--color-accent);
 }
 
 /* Custom Properties */
@@ -69,7 +56,7 @@ button {
 body {
   font-family: var(--ff-body);
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: var(--color-background);
   text-align: center;
   max-width: var(--max-page-width);
 }
@@ -106,6 +93,11 @@ a:focus {
 .accent {
   color: var(--color-accent);
 }
+
+.primary {
+  color: var(--color-primary);
+}
+
 .secondary {
   color: var(--color-secondary);
 }
@@ -129,8 +121,7 @@ a:focus {
 }
 .site-header__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .branding img {
@@ -140,6 +131,7 @@ a:focus {
 .search {
   display: flex;
   min-width: 225px;
+  align-self: center;
 }
 
 .search input[type="search"] {
@@ -158,6 +150,12 @@ a:focus {
 .btn-search:hover {
   color: var(--color-accent);
   background-color: var(--color-primary);
+}
+
+.header-top-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /* MENUS */
@@ -251,7 +249,8 @@ a:focus {
 
 .utility-menu {
   display: flex;
-  gap: 2rem;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 .utility-menu li:hover {
@@ -264,37 +263,12 @@ a:focus {
   color: var(--color-primary);
 }
 
-.utility-menu li::after {
-  color: var(--color-accent);
-  position: relative;
-  top: 15px;
-}
-.utility-menu li:first-child::after {
-  content: "Wishlist";
-  right: 70%;
-}
-
-.utility-menu li:nth-child(2)::after {
-  content: "Login";
-  right: 50%;
-}
-
-.utility-menu li:last-child::after {
-  content: "Basket";
-  right: 60%;
-}
-
-.utility-menu > * {
-  background-color: var(--color-secondary);
-  padding: 1rem;
-  border-radius: 100%;
-  height: 3.375rem;
-  width: 3.375rem;
-}
-.utility-menu button {
-  background-color: transparent;
-  border: none;
-  color: var(--color-accent);
+.utility-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.25rem;
 }
 
 @media (min-width: 45.05rem) {
@@ -305,9 +279,7 @@ a:focus {
   .utility-menu {
     margin-inline-end: 2rem;
   }
-  .utility-menu > * {
-    background-color: var(--color-primary);
-  }
+
   .mobile-menu {
     position: static;
     flex-direction: column;
@@ -320,36 +292,37 @@ a:focus {
 }
 @media (min-width: 45.05rem) {
   .site-header__container {
-    display: grid;
     justify-content: space-between;
-    grid-template-columns: 10rem auto;
-    overflow: auto;
   }
+
   .mobile-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    gap: 0.5rem;
+    flex-grow: 1;
   }
+
+  .header-top-row {
+    flex-direction: row;
+  }
+
   .utility-menu {
     justify-self: end;
   }
-  .search {
-    justify-self: end;
-  }
-  .main-nav {
-    grid-column: 1 / -1;
-    justify-self: end;
+
+  .branding {
+    align-self: baseline;
   }
 }
 
 @media (min-width: 55rem) {
-  .search {
-    /* justify-self: center; */
-    align-self: end;
-    width: 20rem;
+  .header-top-row {
+    gap: 6rem;
+    justify-content: flex-end;
+    width: 100%;
   }
-  .site-header__container {
-    grid-template-columns: 15rem 1fr;
-    overflow: auto;
+
+  .search {
+    width: 20rem;
   }
 }
 
@@ -357,6 +330,9 @@ a:focus {
 .cwc {
   max-width: var(--max-content-width);
   margin-inline: auto;
+}
+.main-content.cwc {
+  background-color: var(--color-primary);
 }
 
 /* FOOTER */
@@ -434,6 +410,20 @@ a:focus {
 
 /* COMPONENTS */
 
+.btn {
+  display: inline-block;
+  width: max-content;
+  margin-inline: auto;
+  text-transform: uppercase;
+  padding: 0.25em 2em;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn.primary {
+  background-color: var(--color-accent);
+}
+
 .jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
@@ -454,21 +444,6 @@ a:focus {
   color: var(--color-accent);
   font-size: 3.5rem;
   margin-block-end: 1rem;
-}
-
-#front-page .jumbotron {
-  background-image: url("../assets/images/keys.jpg");
-  background-blend-mode: overlay;
-}
-
-.countdown {
-  text-align: center;
-  font-size: 0.875rem;
-}
-
-.timer {
-  font-size: 2.375rem;
-  padding-inline: 0.2rem;
 }
 
 .section__heading {

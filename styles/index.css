@@ -1,0 +1,14 @@
+#front-page .jumbotron {
+  background-image: url("../assets/images/keys.jpg");
+  background-blend-mode: overlay;
+}
+
+.countdown {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.timer {
+  font-size: 2.375rem;
+  padding-inline: 0.2rem;
+}

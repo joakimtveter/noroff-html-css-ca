@@ -8,6 +8,12 @@ function closeMenu() {
     mobileMenu.classList.remove('active');
 }
 
+const loginButton = document.querySelector('#login-btn')
+
+loginButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log('open sesame')
+});
 
 
 function isLogedIn() {

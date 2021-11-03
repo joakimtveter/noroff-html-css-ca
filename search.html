@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Wishlist | Gamehub - The universe of games</title>
+    <title>Search results | Gamehub - The universe of games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +17,10 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="./styles/search.css" />
+    <script src="./scripts/main.js" defer></script>
   </head>
-  <body id="wishlist">
+  <body id="search">
     <header class="site-header">
       <div class="site-header__container cwc">
         <div class="branding">
@@ -30,7 +31,6 @@
               alt="Go to Gamehub frontpage"
             />
           </a>
-          <h1 class="sr-only">Gamehub</h1>
           <a class="sr-only sr-only-focusable" href="#main-content"
             >Skip to main content</a
           >
@@ -40,29 +40,74 @@
           <span class="sr-only">Open menu</span>
         </button>
         <div id="mobile-menu" class="mobile-menu">
-          <form role="search" class="search" action="/search.html" method="GET">
-            <input type="search" name="q" role="searchbox" />
-            <button aria-label="Submit Search" class="btn-search" type="submit">
-              <i class="fas fa-search fa-2l" aria-hidden="true"></i>
-            </button>
-          </form>
-          <ul class="utility-menu">
-            <li>
-              <a aria-label="Go to my wishlist" href="/wishlist.html"
-                ><i class="fas fa-list fa-lg" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <button aria-label="Login">
-                <i class="fas fa-user fa-lg" aria-hidden="true"></i>
+          <div class="header-top-row">
+            <form
+              role="search"
+              class="search"
+              action="/search.html"
+              method="GET"
+            >
+              <input type="search" name="q" role="searchbox" />
+              <button
+                aria-label="Submit Search"
+                class="btn-search"
+                type="submit"
+              >
+                <i class="fas fa-search fa-2l" aria-hidden="true"></i>
               </button>
-            </li>
-            <li>
-              <a aria-label="Go to shoppingbasket" href="/basket.html"
-                ><i class="fas fa-shopping-basket fa-lg" aria-hidden="true"></i
-              ></a>
-            </li>
-          </ul>
+            </form>
+            <div class="utility-menu">
+              <a
+                href="/wishlist.html"
+                class="utility-btn"
+                aria-label="Go to my wishlist"
+              >
+                <span class="fa-stack fa-2x">
+                  <i
+                    class="fas fa-circle fa-stack-2x primary"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fas fa-list fa-stack-1x accent"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                Wishlist
+              </a>
+              <a
+                id="login-btn"
+                href="#"
+                class="utility-btn"
+                aria-label="Open log in modal"
+                role="button"
+              >
+                <span class="fa-stack fa-2x">
+                  <i
+                    class="fas fa-circle fa-stack-2x primary"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fas fa-user fa-stack-1x accent"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                Log in
+              </a>
+              <a href="/wishlist.html" class="utility-btn">
+                <span class="fa-stack fa-2x">
+                  <i
+                    class="fas fa-circle fa-stack-2x primary"
+                    aria-hidden="true"
+                  ></i>
+                  <i
+                    class="fas fa-shopping-basket fa-stack-1x accent"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+                Basket
+              </a>
+            </div>
+          </div>
           <nav class="main-nav">
             <ul>
               <li class="main-nav__item">
@@ -86,7 +131,7 @@
         </div>
       </div>
     </header>
-    <main id="main-content">
+    <main id="main-content" class="main-content cwc">
       <h1>Search Results</h1>
     </main>
     <footer class="site-footer">
@@ -143,5 +188,11 @@
         </nav>
       </div>
     </footer>
+    <script>
+      const term = window.location.search.substring(3).replace(/\+/g, " ");
+      document.title = `Search results for ${term} | Gamehub - The universe of games`;
+      const searchbox = document.querySelector("#searchbox");
+      searchbox.setAttribute("value", term);
+    </script>
   </body>
 </html>
