@@ -61,22 +61,17 @@
   display: none;
 }
 
-/* small screens */
 @media (max-width: 45rem) {
+  /* small screens */
 }
 
-/* medium screens */
 @media (min-width: 45.05rem) {
-  body {
-    background-color: red !important;
-  }
+  /* medium screens */
+
   .map {
     display: block;
   }
 }
-/* large screens */
 @media (min-width: 55rem) {
-  body {
-    background-color: rebeccapurple !important;
-  }
+  /* large screens */
 }

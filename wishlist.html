@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/wishlist.css" />
-    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
   </head>
   <body id="wishlist">
     <header class="site-header">
@@ -47,7 +47,7 @@
               action="/search.html"
               method="GET"
             >
-              <input type="search" name="q" role="searchbox" />
+              <input id="searchbox" type="search" name="q" role="searchbox" />
               <button
                 aria-label="Submit Search"
                 class="btn-search"
@@ -93,7 +93,7 @@
                 </span>
                 Log in
               </a>
-              <a href="/wishlist.html" class="utility-btn">
+              <a href="/basket.html" class="utility-btn">
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"

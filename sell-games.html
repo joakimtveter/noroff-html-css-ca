@@ -47,7 +47,7 @@
               action="/search.html"
               method="GET"
             >
-              <input type="search" name="q" role="searchbox" />
+              <input id="searchbox" type="search" name="q" role="searchbox" />
               <button
                 aria-label="Submit Search"
                 class="btn-search"
@@ -93,7 +93,7 @@
                 </span>
                 Log in
               </a>
-              <a href="/wishlist.html" class="utility-btn">
+              <a href="/basket.html" class="utility-btn">
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"
@@ -133,6 +133,55 @@
     </header>
     <main id="main-content" class="main-content cwc">
       <h1>Sell Your games</h1>
+      <p>
+        If you have completed your game, make some money by selling it to
+        another gamer. <br />It is as easy as 1 - 2 - 3 !
+      </p>
+      <section class="sell-section">
+        <div class="step-label">1</div>
+        <h2 class="step-heading">Enter Your Games Barcode</h2>
+        <form>
+          <label for="ean">EAN: </label>
+          <input id="ean" type="text" />
+          <button type="submit" class="btn btn-secondary">Go</button>
+        </form>
+        <button class="btn btn-accent">Next Step</button>
+      </section>
+      <section class="sell-section inactive">
+        <div class="step-label">2</div>
+        <h2 class="step-heading">Report the condition of your game</h2>
+        <form>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="exellent"
+              name="condition"
+              value="exellent"
+            />
+            <label for="exellent">Exellent</label>
+            <input type="radio" id="good" name="condition" value="good" />
+            <label for="good">Good</label>
+            <input type="radio" id="fair" name="condition" value="fair" />
+            <label for="fair">Fair</label>
+          </div>
+          <textarea
+            name="condition-comment"
+            id="condition-comment"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button class="btn btn-accent">Next Step</button>
+        </form>
+      </section>
+      <section class="sell-section inactive">
+        <div class="step-label">3</div>
+        <h2 class="step-heading">Publish Your Game Listing</h2>
+        <p>
+          By listing my game for sale I agree to the
+          <a href="/terms-and-conditions.html">terms and conditions</a>.
+        </p>
+        <button class="btn btn-accent center">Publish</button>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="cwc">

@@ -1,0 +1,21 @@
+.sell-section.inactive {
+  opacity: 0.25;
+}
+.step-label {
+  font-size: 4rem;
+  border-radius: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+}
+
+.step-heading {
+  color: var(--color-accent);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
