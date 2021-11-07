@@ -82,6 +82,12 @@ h2 {
   font-size: 1.5rem;
   margin-top: 0;
 }
+h3 {
+  color: var(--color-accent);
+}
+h4 {
+  color: var(--color-accent);
+}
 
 p {
   max-width: 75ch;
@@ -245,6 +251,7 @@ a:focus {
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 1000;
   }
 }
 .hamburger {
@@ -266,7 +273,7 @@ a:focus {
   border: none;
   background: transparent;
   font-size: 2rem;
-  z-index: 10;
+  z-index: 1000;
 }
 .hamburger:hover,
 .hamburger:focus,
@@ -311,7 +318,7 @@ a:focus {
 
 .utility-menu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -357,6 +364,7 @@ a:focus {
   }
   .utility-menu {
     margin-inline-end: 2rem;
+    justify-content: flex-end;
   }
 
   .mobile-menu {
