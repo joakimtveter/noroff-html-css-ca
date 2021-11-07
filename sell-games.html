@@ -131,40 +131,39 @@
       <h1>Sell Your games</h1>
       <p>
         If you have completed your game, make some money by selling it to
-        another gamer. <br />It is as easy as 1 - 2 - 3 !
+        another gamer. <br />It is as easy as <span class="accent">1</span> - <span class="accent">2</span> - <span class="accent">3</span>! </span>
       </p>
       <section class="sell-section">
         <div class="step-label">1</div>
         <h2 class="step-heading">Enter Your Games Barcode</h2>
-        <form>
+        <form id="ean-form">
           <label for="ean">EAN: </label>
           <input id="ean" type="text" />
-          <button type="submit" class="btn btn-secondary">Go</button>
+          <button type="submit" class="btn btn-primary">Go</button>
         </form>
-        <button class="btn primary">Next Step</button>
+        <button class="btn btn-primary">Next Step</button>
       </section>
       <section class="sell-section inactive">
         <div class="step-label">2</div>
         <h2 class="step-heading">Report the condition of your game</h2>
         <form>
           <div class="radio-group">
-            <input
-              type="radio"
-              id="exellent"
-              name="condition"
-              value="exellent"
-            />
-            <label for="exellent">Exellent</label>
-            <input type="radio" id="good" name="condition" value="good" />
-            <label for="good">Good</label>
-            <input type="radio" id="fair" name="condition" value="fair" />
-            <label for="fair">Fair</label>
+            <div class="radio-pill">
+              <input type="radio" id="exellent" name="condition" value="exellent" />
+              <label for="exellent">Exellent</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" id="good" name="condition" value="good" />
+              <label for="good">Good</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" id="fair" name="condition" value="fair" />
+              <label for="fair">Fair</label>
+            </div>
           </div>
           <textarea
             name="condition-comment"
             id="condition-comment"
-            cols="30"
-            rows="10"
           ></textarea>
           <button class="btn btn-primary">Next Step</button>
         </form>
@@ -176,7 +175,7 @@
           By listing my game for sale I agree to the
           <a href="/terms-and-conditions.html">terms and conditions</a>.
         </p>
-        <button class="btn primary center">Publish</button>
+        <button class="btn btn-primary">Publish</button>
       </section>
     </main>
     <footer class="site-footer">

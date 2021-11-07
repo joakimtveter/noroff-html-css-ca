@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   margin-inline: auto;
+  accent-color: var(--color-accent);
 }
 
 ul {
@@ -44,12 +45,20 @@ button {
   --max-content-width: 75rem;
   --header-height: 10rem;
   --footer-height: 25rem;
+  --layout-height: 21rem;
   --logo-height: 5rem;
 }
 
 @media (min-width: 45.05rem) {
   :root {
     --logo-height: 7.5rem;
+    --layout-height: 23.125rem;
+  }
+}
+
+@media (min-width: 55rem) {
+  :root {
+    --layout-height: 20rem;
   }
 }
 
@@ -88,6 +97,13 @@ a:focus {
 }
 .main-content {
   padding: 2rem;
+  min-height: calc(100vh - var(--layout-height));
+}
+
+.cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
@@ -177,7 +193,12 @@ a:focus {
 .search input[type="search"] {
   padding: 0.5rem;
   border: none;
+  background-color: var(--color-white);
   width: 100%;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
 }
 
 .btn-search {
@@ -185,6 +206,8 @@ a:focus {
   color: var(--color-primary);
   background-color: var(--color-accent);
   width: 2rem;
+  border-start-end-radius: 0.5rem;
+  border-end-end-radius: 0.5rem;
 }
 
 .btn-search:hover {
@@ -509,7 +532,9 @@ button.link {
 }
 
 .radio-pill {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--color-secondary);
   padding: 0.25rem 0.5rem;
   border-radius: 0.75rem;
@@ -524,6 +549,7 @@ input[type="radio"]:checked ~ .radio-pill {
 
 .wishlist-label {
   position: relative;
+  cursor: pointer;
 }
 
 .wishlist-checkbox {
@@ -712,6 +738,55 @@ details p {
 }
 
 /* Forms */
+form h1 {
+  font-size: 2rem;
+}
+input {
+  border: none;
+  border-radius: 0.25rem;
+  height: 2em;
+  background-color: var(--color-secondary);
+}
+
+select {
+  border-radius: 0.25rem;
+  height: 2em;
+}
+
+textarea {
+  height: 10.25rem;
+  width: 100%;
+  resize: none;
+  border-radius: 0.25rem;
+}
+.center-form {
+  max-width: 25rem;
+  margin-block: auto;
+  margin-inline: auto;
+  display: flex;
+
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5rem solid var(--color-secondary);
+  border-radius: 1rem;
+}
+
+.center-form label {
+  margin-bottom: 0.5rem;
+}
+
+.center-form input {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.center-form a {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
 .radio-group {
   display: flex;
   gap: 1rem;
@@ -827,9 +902,22 @@ body#page-not-found {
 }
 
 /* SELL GAMES PAGE */
+.sell-section {
+  max-width: 75ch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
 .sell-section.inactive {
   opacity: 0.25;
 }
+
+#ean-form {
+  margin-bottom: 1rem;
+}
+
 .step-label {
   font-size: 4rem;
   border-radius: 50%;
@@ -838,10 +926,6 @@ body#page-not-found {
   text-align: center;
   color: var(--color-primary);
   background-color: var(--color-accent);
-}
-
-.step-heading {
-  color: var(--color-accent);
 }
 
 /* SINGLE PRODUCT PAGE */
@@ -934,7 +1018,6 @@ body#page-not-found {
 .contact-form *:is(input, select, textarea) {
   background-color: var(--color-secondary);
   width: 100%;
-  height: 2em;
   padding: 0.2em 0.5em;
   border: none;
   color: var(--color-white);
@@ -949,8 +1032,9 @@ body#page-not-found {
 .terms {
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   margin-block-end: 2rem;
 }
 
