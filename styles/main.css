@@ -24,6 +24,14 @@ img {
 
 button {
   cursor: pointer;
+  display: block;
+  margin-inline: auto;
+}
+
+@media (min-width: 45.05rem) {
+  button {
+    display: inline-block;
+  }
 }
 
 /* Custom Properties */
@@ -73,20 +81,22 @@ body {
 
 h1 {
   color: var(--color-accent);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
 h2 {
   color: var(--color-accent);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 0;
 }
 h3 {
   color: var(--color-accent);
+  margin-top: 0;
 }
 h4 {
   color: var(--color-accent);
+  margin-top: 0;
 }
 
 p {
@@ -153,7 +163,9 @@ a:focus {
 .accent {
   color: var(--color-accent);
 }
-
+.mb0 {
+  margin-bottom: 0;
+}
 .pb1 {
   padding-block: 1rem;
 }
@@ -169,6 +181,9 @@ a:focus {
   }
   .col-2 {
     flex-direction: row;
+  }
+  h1 {
+    font-size: 2.5rem;
   }
 }
 
@@ -584,6 +599,7 @@ input.wishlist-checkbox:checked ~ svg > path.wishlist-toggle-full {
 
 .reviews {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 3rem;
 }
@@ -625,6 +641,11 @@ input.wishlist-checkbox:checked ~ svg > path.wishlist-toggle-full {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 45.05rem) {
+  .reviews {
+    flex-direction: row;
+  }
+}
 
 /* Stock level indicator */
 .stock-indicator {
@@ -643,6 +664,7 @@ input.wishlist-checkbox:checked ~ svg > path.wishlist-toggle-full {
 /* Large horizontal card */
 .card-large {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-secondary);
@@ -680,6 +702,15 @@ input.wishlist-checkbox:checked ~ svg > path.wishlist-toggle-full {
 
 .card-large .product-image {
   height: 250px;
+}
+
+@media (min-width: 45.05rem) {
+  .card-large {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 55rem) {
 }
 
 /* jumbotron */
@@ -939,6 +970,7 @@ body#page-not-found {
 /* SINGLE PRODUCT PAGE */
 #single-game .single-game {
   display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
 
@@ -948,6 +980,7 @@ body#page-not-found {
 
 #single-game .buy-product {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -983,7 +1016,22 @@ body#page-not-found {
   padding: 1rem;
   background-color: var(--color-secondary);
   border-radius: 0.5rem;
-  max-width: 90%;
+  max-width: 100%;
+}
+
+@media (min-width: 45.05rem) {
+  #single-game .single-game {
+    flex-direction: row;
+  }
+  #single-game .buy-product {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 55rem) {
+  #single-game .game-info {
+    max-width: 90%;
+  }
 }
 
 /* SHOPPING BASKET PAGE  */
