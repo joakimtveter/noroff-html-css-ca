@@ -789,7 +789,6 @@ input {
   border-radius: 0.25rem;
   height: 2em;
   background-color: var(--color-secondary);
-  width: 100%;
 }
 
 select {
