@@ -83,6 +83,7 @@ h1 {
   color: var(--color-accent);
   font-size: 1.5rem;
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -165,6 +166,9 @@ a:focus {
 }
 .mb0 {
   margin-bottom: 0;
+}
+.mia {
+  margin-inline: auto;
 }
 .pb1 {
   padding-block: 1rem;
@@ -785,6 +789,7 @@ input {
   border-radius: 0.25rem;
   height: 2em;
   background-color: var(--color-secondary);
+  width: 100%;
 }
 
 select {
@@ -842,6 +847,13 @@ textarea {
 }
 .form-control .no-label {
   margin-left: 145px;
+}
+
+.form-control-btns {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 input[type="text"] {
