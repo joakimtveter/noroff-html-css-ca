@@ -841,12 +841,6 @@ textarea {
   align-items: center;
   margin-bottom: 1rem;
 }
-.form-control label {
-  width: 145px;
-}
-.form-control .no-label {
-  margin-left: 145px;
-}
 
 .form-control-btns {
   flex-direction: column-reverse;
@@ -860,16 +854,27 @@ input[type="text"] {
   padding: 0.25rem;
 }
 
-label.short {
-  margin-left: 15px;
-  width: 50px;
-}
-input.short {
-  width: 50px;
+@media (min-width: 45.05rem) {
+  label.short {
+    margin-left: 15px;
+    width: 50px;
+  }
+  input.short {
+    width: 50px;
+  }
+
+  input.medium {
+    width: 135px;
+  }
+  .form-control label {
+    width: 145px;
+  }
+  .form-control .no-label {
+    margin-left: 145px;
+  }
 }
 
-input.medium {
-  width: 135px;
+@media (min-width: 55rem) {
 }
 
 /* Productlist */
