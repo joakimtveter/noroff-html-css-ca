@@ -17,7 +17,6 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/faq.css" />
     <script src="./scripts/main.js" defer></script>
   </head>
   <body id="basket">
@@ -74,13 +73,7 @@
                 </span>
                 Wishlist
               </a>
-              <a
-                id="login-btn"
-                href="#"
-                class="utility-btn"
-                aria-label="Open log in modal"
-                role="button"
-              >
+              <a id="login-btn" href="/login.html" class="utility-btn">
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"
@@ -94,6 +87,9 @@
                 Log in
               </a>
               <a href="/basket.html" class="utility-btn">
+                <div id="basket-indicator" class="hidden" aria-hidden="true">
+                  2
+                </div>
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"
@@ -133,7 +129,65 @@
     </header>
     <main id="main-content" class="main-content cwc">
       <h1>Shopping Basket</h1>
-      
+
+      <table class="basket-items">
+        <thead class="basket-header">
+          <tr>
+            <th class="product-image-cell"></th>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tr>
+          <td class="product-image-cell">
+            <img
+              class="product-image"
+              src="/assets/product-images/GameHub_covers.jpg"
+              alt="Cover"
+              height="150"
+            />
+          </td>
+          <td>
+            <h2 class="title">Space War</h2>
+          </td>
+          <td><input type="number" name="qty" min="1" value="1" /></td>
+          <td>350 kr</td>
+          <td>649 kr</td>
+        </tr>
+        <tr>
+          <td class="product-image-cell">
+            <img
+              class="product-image"
+              src="/assets/product-images/GameHub_covers.jpg"
+              alt="Cover"
+              height="150"
+            />
+          </td>
+          <td>
+            <h2 class="title">Space War</h2>
+          </td>
+          <td>
+            <input type="number" name="qty" min="1" />
+          </td>
+          <td>350 kr</td>
+          <td>649 kr</td>
+        </tr>
+        <thead class="basket-footer">
+          <tr>
+            <th class="product-image-cell"></th>
+            <th>Total</th>
+            <th></th>
+            <th></th>
+            <th>1650</th>
+          </tr>
+        </thead>
+      </table>
+      <div class="align-right pb2">
+        <a class="btn btn-primary" href="/check-out.html">
+          Procede to check-out</a
+        >
       </div>
     </main>
     <footer class="site-footer">

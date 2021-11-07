@@ -17,7 +17,6 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/sell-games.css" />
     <script src="./scripts/main.js" defer></script>
   </head>
   <body id="sell-games">
@@ -74,13 +73,7 @@
                 </span>
                 Wishlist
               </a>
-              <a
-                id="login-btn"
-                href="#"
-                class="utility-btn"
-                aria-label="Open log in modal"
-                role="button"
-              >
+              <a id="login-btn" href="/login.html" class="utility-btn">
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"
@@ -94,6 +87,9 @@
                 Log in
               </a>
               <a href="/basket.html" class="utility-btn">
+                <div id="basket-indicator" class="hidden" aria-hidden="true">
+                  2
+                </div>
                 <span class="fa-stack fa-2x">
                   <i
                     class="fas fa-circle fa-stack-2x primary"
@@ -114,7 +110,7 @@
                 <a href="/games.html" class="main-nav__link">Purchase Games</a>
               </li>
               <li class="main-nav__item">
-                <a href="/sell-games.html" class="main-nav__link"
+                <a href="/sell-games.html" class="main-nav__link active"
                   >Sell your Games</a
                 >
               </li>
@@ -145,7 +141,7 @@
           <input id="ean" type="text" />
           <button type="submit" class="btn btn-secondary">Go</button>
         </form>
-        <button class="btn btn-accent">Next Step</button>
+        <button class="btn primary">Next Step</button>
       </section>
       <section class="sell-section inactive">
         <div class="step-label">2</div>
@@ -170,7 +166,7 @@
             cols="30"
             rows="10"
           ></textarea>
-          <button class="btn btn-accent">Next Step</button>
+          <button class="btn btn-primary">Next Step</button>
         </form>
       </section>
       <section class="sell-section inactive">
@@ -180,7 +176,7 @@
           By listing my game for sale I agree to the
           <a href="/terms-and-conditions.html">terms and conditions</a>.
         </p>
-        <button class="btn btn-accent center">Publish</button>
+        <button class="btn primary center">Publish</button>
       </section>
     </main>
     <footer class="site-footer">
